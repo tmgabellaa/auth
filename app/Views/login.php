@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход</title>
-    <link rel="stylesheet" href="/app1/public/style.css"> <!-- Подключите свой CSS -->
+    <link rel="stylesheet" href="/app1/public/style.css">
 </head>
 <body>
 <div class="container">
     <h2>Вход</h2>
-    <form action="login.php" method="POST">
+    <form action="/app1/public/login" method="POST">
         <label>
             <input type="email" name="email" placeholder="Email" required>
         </label>
