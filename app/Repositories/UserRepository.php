@@ -17,7 +17,7 @@ class UserRepository extends Repository
              $stmt->execute([
                  'name' => $user->getName(),
                  'email' => $user->getEmail(),
-                 'password' => $user->getPassword()
+                 'password' => password_hash($user->getPassword(), PASSWORD_DEFAULT)
              ]);
          }catch (PDOException $e){
              die("error register repository" . $e->getMessage());
@@ -40,6 +40,7 @@ class UserRepository extends Repository
              return $result;
          } else {
              echo "Неверный логин или пароль.";
+             echo $result['password'];
              return null;
          }
      }
